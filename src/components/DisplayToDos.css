@@ -1,0 +1,19 @@
+.container {
+  margin: 1.5rem auto 0;
+}
+
+.all-todos {
+  display: flex;
+  max-width: 25rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.one-todo {
+  margin: 1rem auto;
+}
+
+/* .each-todo-container {
+
+} */

@@ -6,12 +6,9 @@ body {
   background-color: lightgray;
   background-position: center center;
   max-height: 100vh;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .App {
   text-align: center;
-}
-
-h1 {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
