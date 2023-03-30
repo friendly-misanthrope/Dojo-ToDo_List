@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   background-color: lightgray;
   background-position: center center;
+  max-height: 100vh;
 }
 
 .App {
