@@ -1,7 +1,7 @@
 ## Running the Application
-1 Clone repository
-2 Navigate to project directory in Bash terminal
-3 Run `npm install` to install dependencies
+# Clone repository
+# Navigate to project directory in Bash terminal
+# Run `npm install` to install dependencies
 
 ## In the project directory, you can run:
 
