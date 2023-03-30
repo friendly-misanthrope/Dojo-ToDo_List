@@ -22,6 +22,11 @@
 .btn {
   width: 6rem;
   margin: 0.5rem auto 0;
+  font-family: serif, sans-serif;
+}
+
+.btn-danger {
+  font-weight: bold;
 }
 
 h2 {
