@@ -5,7 +5,20 @@ import { useState } from 'react'
 
 function App() {
   // lifted state for ToDo list
-  const [allToDos, setAllToDos] = useState([])
+  const [allToDos, setAllToDos] = useState([
+    {content: 'Walk dog',
+    isComplete: false},
+    {content: 'Clean room',
+    isComplete: false},
+    {content: 'Do dishes',
+    isComplete: false},
+    {content: 'Vacuum',
+    isComplete: false},
+    {content: 'Do laundry',
+    isComplete: false},
+    {content: 'Mow lawn',
+    isComplete: false}
+  ])
   
   // JSX Return, pass state down through props
   return (

@@ -39,7 +39,7 @@ const DisplayToDos = (props) => {
           allToDos.map((item, index) => (
             <div key={index} className="each-todo-container">
               <div className="one-todo">
-                {/* Only display the task content with is-complete class if isComplete === true */}
+                {/* Only apply the is-complete class to the task content if item.isComplete === true */}
                 {
                   item.isComplete ?
                   <h3 className="task-content is-complete">{item.content}</h3>
