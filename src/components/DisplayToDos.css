@@ -4,7 +4,7 @@
 
 .all-todos {
   display: flex;
-  max-width: 40rem;
+  max-width: 50rem;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
@@ -26,4 +26,17 @@
 
 h2 {
   text-decoration: underline;
+}
+
+.complete {
+  display: flex;
+  margin: 0 auto;
+}
+
+.complete > input {
+  margin-left: 0.5rem;
+}
+
+.is-complete {
+  text-decoration: line-through;
 }
