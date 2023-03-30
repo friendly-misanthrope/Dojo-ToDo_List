@@ -4,6 +4,7 @@ const DisplayToDos = (props) => {
 
   const {allToDos, setAllToDos} = props
 
+  // Click handler for toggling whether the task is complete
   const toggleComplete = (todo) => {
     const updatedTaskList = allToDos.map((thisTodo) => {
       if (thisTodo === todo) {
@@ -11,11 +12,22 @@ const DisplayToDos = (props) => {
       }
       return thisTodo
     })
+    // Set allTodos to the updated array
     setAllToDos(updatedTaskList)
   }
 
+  // ToDo: Delete task handler
+  const deleteTaskHandler = (task) => {
+    const shortenedTaskList = allToDos.filter((thisTask) => (
+      thisTask !== task
+    ))
+    setAllToDos(shortenedTaskList)
+  }
+ 
+  // JSX Return
   return (
     <div className="container">
+      {/* Only display this h2 if there are todo items in the array */}
       {
         allToDos.length > 0 ?
         <h2>My ToDo List:</h2>
@@ -23,10 +35,12 @@ const DisplayToDos = (props) => {
       }
       
       <div className="all-todos">
-        {
+        {/* Iterate through all tasks & display them */}
+        { 
           allToDos.map((item, index) => (
             <div key={index} className="each-todo-container">
               <div className="one-todo">
+                {/* Only display the task content with is-complete class if isComplete === true */}
                 {
                   item.isComplete ?
                   <h3 className="task-content is-complete">{item.content}</h3>
@@ -34,9 +48,10 @@ const DisplayToDos = (props) => {
                 }
                 <div className="complete">
                   <span>Task Complete?</span>
+                  {/* set checked to value of isComplete, call toggleComplete with current map item  */}
                   <input type="checkbox" checked={item.isComplete} onClick={() => toggleComplete(item)} />
                 </div>
-                <button className="btn btn-danger">Delete</button>
+                <button className="btn btn-danger" onClick={() => deleteTaskHandler(item)}>Delete</button>
               </div>  
             </div>
           ))
