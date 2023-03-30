@@ -10,7 +10,7 @@ const TodoForm = (props) => {
   })
 
   // Destructure input state into individual variables
-  const {content, isComplete} = oneToDo
+  const { content } = oneToDo
 
   // Destructure getter and setter for full todo list
   const { setAllToDos } = props
@@ -32,13 +32,13 @@ const TodoForm = (props) => {
     })
   }
 
-  
+  // JSX Return
   return (
     <div className='todo-form'>
       <h1>To Do List</h1>
       <form action="submit" onSubmit={createToDo}>
         <div className="form-group">
-          <label htmlFor="add-task">Add a task to your ToDo List:</label>
+          <label htmlFor="content">Add a task to your ToDo List:</label>
           <input type="text" className="form-control" name="content" onChange={onChangeHandler} value={content} />
           <input type="submit" className="form-control btn btn-primary" value="Add Task" />
         </div>
