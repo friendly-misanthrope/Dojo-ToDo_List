@@ -16,7 +16,6 @@ const DisplayToDos = (props) => {
     setAllToDos(updatedTaskList)
   }
 
-  // ToDo: Delete task handler
   const deleteTaskHandler = (task) => {
     const shortenedTaskList = allToDos.filter((thisTask) => (
       thisTask !== task
