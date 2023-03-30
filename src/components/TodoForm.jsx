@@ -21,15 +21,26 @@ const TodoForm = (props) => {
     setOneToDo(prevState => {return {...prevState, [e.target.name]: e.target.value}})
   }
 
+  const validateForm = () => {
+    if (content.length < 3) {
+      return false
+    }
+    return true
+  }
+
   // submit handler for submitting a task
   const createToDo = (e) => {
     e.preventDefault()
-    setAllToDos(prevState => {return [...prevState, oneToDo]})
+    if (validateForm()){
+      setAllToDos(prevState => {return [...prevState, oneToDo]})
 
-    setOneToDo({
-      content: '',
-      isComplete: false
-    })
+      setOneToDo({
+        content: '',
+        isComplete: false
+      })
+      return true
+    }
+    return false
   }
 
   // JSX Return
@@ -40,7 +51,12 @@ const TodoForm = (props) => {
         <div className="form-group">
           <label htmlFor="content">Add a task to your ToDo List:</label>
           <input type="text" className="form-control" name="content" onChange={onChangeHandler} value={content} />
-          <input type="submit" className="form-control btn btn-primary" value="Add Task" />
+          {
+            content.length > 0 && content.length < 3 ?
+            <p className="error">Task must be 3 or more characters long.</p>
+            : null
+          }
+          <input type="submit" className="form-control btn btn-primary" value="Add Task" disabled={validateForm() ? false : true }/>
         </div>
       </form>
     </div>
