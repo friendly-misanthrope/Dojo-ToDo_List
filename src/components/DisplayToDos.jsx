@@ -51,6 +51,7 @@ const DisplayToDos = (props) => {
                   {/* set checked to value of isComplete, call toggleComplete with current map item  */}
                   <input type="checkbox" checked={item.isComplete} onClick={() => toggleComplete(item)} />
                 </div>
+                {/* Call deleteTaskHandler, passing it the current item and allowing the user to delete a task when button is clicked */}
                 <button className="btn btn-danger" onClick={() => deleteTaskHandler(item)}>Delete</button>
               </div>  
             </div>
