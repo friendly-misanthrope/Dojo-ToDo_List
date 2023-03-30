@@ -4,16 +4,26 @@
 
 .all-todos {
   display: flex;
-  max-width: 25rem;
+  max-width: 40rem;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
 .one-todo {
-  margin: 1rem auto;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 1rem;
+  border-radius: 0.75rem;
 }
 
-/* .each-todo-container {
+.btn {
+  width: 6rem;
+  margin: 0.5rem auto 0;
+}
 
-} */
+h2 {
+  text-decoration: underline;
+}

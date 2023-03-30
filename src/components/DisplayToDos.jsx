@@ -14,6 +14,7 @@ const DisplayToDos = (props) => {
               <div key={index} className="one-todo">
                 <h3 className="task-content">{item.content}</h3>
                 <span>Task Complete?</span><input type="checkbox" />
+                <button className="btn btn-danger">Delete</button>
               </div>  
             </div>
           ))
